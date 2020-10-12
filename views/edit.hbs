@@ -1,0 +1,111 @@
+<div class="container  custom-container-width ">
+  <div class="row d-flex justify-content-end my-3">
+    <a href="/">> 回首頁</a>
+  </div>
+
+
+</div>
+
+<div class="container col-6">
+  <form style="" class="mb-3" action="/restaurants/{{store.id}}/edit" method="POST">
+    <div class="form-row">
+      {{!--  
+      <div class="form-group col-md-4">
+        <label for="exampleFormControlInput1">餐廳 ID</label>
+        <input type="number" class="form-control" name="id" id="exampleFormControlInput1" placeholder="請輸入餐廳的ID">
+      </div>
+      --}}
+      <div class="form-group col-md-6">
+        <label for="exampleFormControlInput1">餐廳名稱</label>
+        <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="請輸入餐廳的名稱"
+          value="{{store.name}}" required>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="exampleFormControlInput1">餐廳名稱(英文)</label>
+        <input type="text" class="form-control" name="name_en" id="exampleFormControlInput1" placeholder="請輸入餐廳的英文名稱"
+          value="{{store.name_en}}" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">餐廳種類</label>
+      <select name="category" class="form-control" id="exampleFormControlSelect2">
+        <option value="美式餐廳">美式餐廳</option>
+        <option value="日本料理">日本料理</option>
+        <option value="義式餐廳">義式餐廳</option>
+        <option value="中東料理">中東料理</option>
+        <option value="酒吧">酒吧</option>
+        <option value="咖啡">咖啡</option>
+        <option value="其他">其他</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">餐廳地址</label>
+      <input type="text" class="form-control" name="location" id="exampleFormControlInput1" placeholder="請輸入餐廳的地址"
+        value="{{store.location}}" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">餐廳 Google Map (URL)</label>
+      <input type="text" class="form-control" name="google_map" id="exampleFormControlInput1"
+        placeholder="請輸入餐廳的Google Map" value="{{store.google_map}}" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="exampleFormControlInput1">餐廳電話</label>
+        <input type="text" class="form-control" name="phone" id="exampleFormControlInput1" placeholder="請輸入餐廳的電話"
+          value="{{store.phone}}" required>
+      </div>
+      <div class="form-group col-md-6 ">
+        <div>
+          <label for="exampleFormControlInput1">餐廳評分</label>
+          <div class="mt-2 d-flex justify-content-between">
+            <div class="form-check form-check-inline ">
+              <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="1">
+              <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline ">
+              <input class="form-check-input" type="radio" name="rating" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="form-check form-check-inline ">
+              <input class="form-check-input" type="radio" name="rating" id="inlineRadio3" value="3">
+              <label class="form-check-label" for="inlineRadio3">3</label>
+            </div>
+            <div class="form-check form-check-inline ">
+              <input class="form-check-input" type="radio" name="rating" id="inlineRadio4" value="4">
+              <label class="form-check-label" for="inlineRadio4">4</label>
+            </div>
+            <div class="form-check form-check-inline ">
+              <input class="form-check-input" type="radio" name="rating" id="inlineRadio5" value="5" checked>
+              <label class="form-check-label" for="inlineRadio5">5</label>
+            </div>
+          </div>
+        </div>
+
+        {{!-- 
+                <select class="form-control" id="exampleFormControlSelect2">
+                  <option>5 ★★★★★</option>
+                  <option>4 ★★★★</option>
+                  <option>3 ★★★</option>
+                  <option>2 ★★</option>
+                  <option>1 ★</option>
+                </select>
+         --}}
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">請簡單描述這家餐廳</label>
+      <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"
+        required>{{store.description}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">餐廳圖片(URL)</label>
+      <input type="text" class="form-control" name="image" id="exampleFormControlInput1" placeholder="{{store.image}}"
+        value="{{store.image}}">
+    </div>
+
+    <button class="btn btn-primary" type="submit">資料修改完畢</button>
+  </form>
+
+</div>
